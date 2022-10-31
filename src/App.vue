@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <img src="@/assets/Slider3.jpg" id="banner">
+
+      <b-card title="Card Title" no-body>
+      <MenuPub/>
+      </b-card>
+      <b-card-body>
+        <router-view></router-view>
+      </b-card-body>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MenuPub from '@/components/MenuPub.vue'
 export default {
-  name: 'App',
+  
   components: {
-    HelloWorld
+    MenuPub
   }
 }
 </script>
@@ -23,6 +30,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#banner {
+  width: 100%;
+  height: 150px;
 }
 </style>
