@@ -1,9 +1,11 @@
+import { BIconEmojiExpressionlessFill } from 'bootstrap-vue'
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VuexPercistence from 'vuex-persist'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const storage = new Vuex.Store({
   state: {
     usuario: '',
     idusr: 0,
@@ -23,5 +25,12 @@ export default new Vuex.Store({
     setTipo(state, value) {
       state.tipo = value
     }
-  }
+  },
+  plugins: [
+    new VuexPercistence( {
+      storage: window.localStorage
+    }).plugin
+  ]
 })
+
+export default storage;
