@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-/* import HomeView from '../views/HomeView.vue' */
+//import HomeView from '../views/HomeView.vue'
 import PagInicio from '@/components/PagInicio.vue'
 import RegistroPost from '@/components/RegistroPost.vue'
-import LisConvocatorias from '@/components/LisConvocatorias.vue'
-import LisHabilitados from '@/components/LisHabilitados.vue'
-import BienvenidoUsuario from '@/components/BienvenidoUsuario'
-import GestionUsuarios from '@/components/GestionUsuarios'
+import ListHabilitados from '@/components/ListHabilitados.vue'
+import ListConvocatorias from '@/components/ListConvocatorias.vue'
+import BienvenidoUsuario from '@/components/BienvenidoUsuario.vue'
+import GestionUsuario from '@/components/GestionUsuario.vue'
 
 Vue.use(VueRouter)
 
@@ -18,22 +18,22 @@ const routes = [
   },
   {
     path: '/registro',
-    name: 'RegistroPost',
+    name: 'registropost',
     component: RegistroPost
   },
   {
     path: '/convocatorias',
-    name: 'LisConvocatorias',
-    component: LisConvocatorias
+    name: 'ListConvocatorias',
+    component: ListConvocatorias
   },
   {
     path: '/habilitados',
-    name: 'LisHabilitados',
-    component: LisHabilitados
+    name: 'ListHabilitados',
+    component: ListHabilitados
   },
   {
     path: '/about',
-    name: 'about',
+    name: 'about',    
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
@@ -48,8 +48,8 @@ const routes = [
   },
   {
     path: '/usr/gestion',
-    name: 'gestionUsuarios',
-    component: GestionUsuarios
+    name: 'gestionusuario',
+    component: GestionUsuario
   }
 ]
 

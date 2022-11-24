@@ -1,13 +1,13 @@
 <template>
     <div>
-       <h1>Bienvenido</h1>  
+        <h1>Lista de Habilitados</h1>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "BienvenidoUsuario"  
-    }
+export default {
+    name: "ListHabilitados"
+}
 </script>
 
 <style lang="scss" scoped>
